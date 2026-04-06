@@ -5,9 +5,9 @@ Briefly, the script plans to download the SRR files from the NCBI. The reads wil
 
 **Link to the paper**
 
-The paper that I will be base my methodology will be from the paper `Data analysis` section of this paper [Whole genome sequencing](https://bioone.org/journals/avian-diseases/volume-66/issue-4/aviandiseases-D-22-99999/A-Universal-Single-Primer-Amplification-Protocol-to-Perform-Whole-Genome/10.1637/aviandiseases-D-22-99999.full).
+The paper that I will be base my methodology will be from the paper `Data analysis` section of this paper [Whole genome sequencing](https://link.springer.com/article/10.1186/s13073-025-01597-4).
 
 **Link to the code**
 
-I will be using the following code and pipeline with modifications and script addition based on this pipeline in this script [Variant Calling](https://github.com/Schwartz-Lab-at-Auburn/FunGen2025/blob/mlob/main/DogIIS_map_variantcall_conc.sh).
+I will be using the following code and pipeline with modifications and script addition based on this pipeline in this script [Variant Calling](https://github.com/genomicsITER/nf-rsvpipeline).
 
