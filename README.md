@@ -1,7 +1,10 @@
-## Code Review
+# SNP Code Review
 
-During this process the samples will be taken from the infected tissue followed by RNA extraction and cDNA extraction. The cDNA will be used for the sequencing libraries preparation and samples will be sequenced and the resulting sequence reads will be further analyzed using bioinformatics pipeline. However, for this project, we will use the raw reads from the NCBI to process further for the bioinformatics pipeline and data analysis. For the bioinformatics pipeline description will be used based on the research paper attached below and the code will be used based on the github account linked below. The code attached includes pipeline for figuring out the singe nucleotide polymorphism in the dog species. However, I plan to use the modified version of that script to use for the avian reovirus in the chicken host. 
-Briefly, the script plans to download the SRR files from the NCBI. The reads will then be checked for the quality and unnecessary, shorter read counts, adapters, etc. will be cleaned using the Trimmomatic code. The clean reads will be mapped with the chicken genome. The unmapped reads will then be referenced and mapped with the ARV S1133 genome. When the viral reads are mapped with reference genome, locations where the nucleotide bases have changed will give the SNP. This process is also called the variant calling and the SNPs can be visualized and analyzed. 
+## Summary of paper
+
+The manuscript that I will be focusing for my code review will be based on the paper entitled "A bench-to-data analysis workflow for respiratory syncytial virus whole-genome sequencing with short and long-read approaches." This paper using respiratory suncytial virus (RSV) perform genomic surveillance to detect and monitor circulating lineage and the emergence of amino acid substitutions affecting transmission. For my project, I will be focusing on emergence of amino acid substitution part and illumina sequencing approaches bioinformatic pipelines. The github for this paper has the well documented scripts mostly in the bash scripts while also contains the python scripts. I will be using most of the scripts used in the paper with some changes and additional input.
+
+Some of the similar scripts that I will be using are FASTQC for determining the quality control of raw reads and trimmed reads. The authors have used fastp for trimming the reads that contain adapters, low quality reads and short reads. However, I will be using cutadapt scripts that is more recent and updated compared to fastq. For host removal, kraken2 tool is being used, however, I will be using bwa-dmem for remove host reads and also alignment of viral reads to the reference viral genome. Furhthermore, iVar is used for variant-calling and creating consensus sequence, however I am planning to use bcftools for variant calling and SNP detection. 
 
 **Link to the paper**
 
@@ -9,5 +12,5 @@ The paper that I will be base my methodology will be from the paper `Data analys
 
 **Link to the code**
 
-I will be using the following code and pipeline with modifications and script addition based on this pipeline in this script [Variant Calling](https://github.com/genomicsITER/nf-rsvpipeline).
+I will be using the following code and pipeline with modifications and script addition based on this pipeline in this script [Variant Calling](https://github.com/genomicsITER/nf-rsvpipeline). 
 
